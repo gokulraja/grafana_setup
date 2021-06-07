@@ -50,8 +50,9 @@ scrape_configs:
     replacement: 127.0.0.1:9115
     action: replace
   static_configs:
-  - files:
-    - /home/ubuntu/prometheus-2.27.1.linux-amd64/targets.yml
+  - targets:
+    - https://www.telegraph.co.uk
+    - https://www.google.com
 - job_name: node
   honor_timestamps: true
   scrape_interval: 5s
