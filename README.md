@@ -30,7 +30,7 @@ node_exporter run on 9100 port and expose 9100 port.
     wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-amd64.tar.gz
     wget https://dl.grafana.com/oss/release/grafana_7.5.7_amd64.deb
 
-Requires file wouldbe downloaded.
+Requires file would be downloaded.
 
 **Installation for grafana :**
 
@@ -57,13 +57,6 @@ Grafana run on 3000 port and expose 3000 port.
 Create a file blackbox.service
 
     sudo nano /etc/systemd/system/blackbox.service
-
-
-for pasting the data use shift+insert
-
-for saving use ctrl+o 
-
-for exit use ctrl+x
 
 place the data from blackbox.service (github-repo)
 
@@ -117,6 +110,40 @@ grafana runs on 3000 port.
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+http://localhost:3000
 
+user-name: admin and password: admin
+
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/1.png)
+
+ set new password
+
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/2.png)
+
+ add a data source
+
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/3.png)
+
+ click prometheus
+ 
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/4.png)
+
+ enter url as shown
+ 
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/5.jpeg)
+ 
+ import dashboard
+
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/9.png)
+
+ for web-monitoring the code is 13041 and for node-monitoring code is 13978
   
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/6.png)
+
+ select prometheus data-source
+
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/7.png)
+
+ for node-exporter
+
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/8.png)
