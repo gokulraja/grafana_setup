@@ -3,7 +3,13 @@
 
 **Client-side Setup:**
 
-**Download node-exporter:**
+**Single installation file for client side**
+
+    wget https://raw.githubusercontent.com/manofsteel0007/grafana_setup/main/client-setup.sh
+    chmod +x client-setup.sh
+    ./client-setup.sh
+
+**OR Download node-exporter:**
     
     wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
 
