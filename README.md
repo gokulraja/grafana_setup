@@ -34,14 +34,14 @@ node_exporter run on 9100 port and expose 9100 port.
 
     wget https://github.com/prometheus/prometheus/releases/download/v2.27.1/prometheus-2.27.1.linux-amd64.tar.gz
     wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-amd64.tar.gz
-    wget https://dl.grafana.com/oss/release/grafana_7.5.7_amd64.deb
+    wget https://dl.grafana.com/oss/release/grafana_8.0.3_amd64.deb
 
 Requires file would be downloaded.
 
 **Installation for grafana :**
 
     sudo apt-get install -y adduser libfontconfig1
-    sudo dpkg -i grafana_7.5.7_amd64.deb
+    sudo dpkg -i grafana_8.0.3_amd64.deb
 
 grafana will be installed as service.
 
