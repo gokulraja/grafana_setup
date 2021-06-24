@@ -112,6 +112,8 @@ paste the target url install 'http://example.com'
 
 grafana runs on 3000 port.
 
+for custom overall Node_monitoring import the grafana_dashboard.json file
+
 
 
 ## Screenshots
