@@ -1,6 +1,12 @@
 
 # Setup for Node-monitoring and Web-monitoring
 
+**Create a new user, switch to the new user and move to the user path**
+    
+    sudo adduser monitoring
+    sudo usermod -aG sudo monitoring
+    su monitoring
+
 **Client-side Setup:**
 
 **Single installation file for client side**
@@ -29,6 +35,12 @@ move inside the folder and run node_exporter
 node_exporter run on 9100 port and expose 9100 port.
 
 **Server-side Setup:**
+
+**Single installation file for server side**
+
+    wget https://raw.githubusercontent.com/manofsteel0007/grafana_setup/main/server-setup.sh
+    chmod +x server-setup.sh
+    ./server-setup.sh
 
 **Download prometheus, grafana ,blackbox-exporter :**
 
