@@ -8,9 +8,10 @@ sudo tar xvzf /opt/prometheus/prometheus-2.27.1.linux-amd64.tar.gz -C /opt/prome
 
 sudo wget https://raw.githubusercontent.com/manofsteel0007/grafana_setup/main/prometheus.service -O /etc/systemd/system/prometheus.service
 
-sudo mkdir /opt/blackbox_exporter
+sudo mkdir /opt/blackbox
 
-sudo wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-amd64.tar.gz -O /opt/blackbox_exporter/blackbox_exporter-0.19.0.linux-amd64.tar.gz
+
+sudo wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-amd64.tar.gz -O /opt/blackbox/blackbox_exporter-0.19.0.linux-amd64.tar.gz
 
 sudo tar xvzf /opt/blackbox/blackbox_exporter-0.19.0.linux-amd64.tar.gz -C /opt/blackbox/
 
@@ -24,9 +25,9 @@ sudo rm /opt/prometheus/prometheus-2.27.1.linux-amd64/prometheus.yml
 
 sudo wget https://raw.githubusercontent.com/manofsteel0007/grafana_setup/main/prometheus.yml -O /opt/prometheus/prometheus-2.27.1.linux-amd64/prometheus.yml
 
-sudo rm -r /opt/prometheus/prometheus-2.27.1.linux-amd64.tar.gz
+sudo rm /opt/prometheus/prometheus-2.27.1.linux-amd64.tar.gz
 
-sudo rm -r /opt/blackbox/blackbox_exporter-0.19.0.linux-amd64.tar.gz
+sudo rm /opt/blackbox/blackbox_exporter-0.19.0.linux-amd64.tar.gz
 
 sudo systemctl daemon-reload
 
