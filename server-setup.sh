@@ -10,7 +10,6 @@ sudo wget https://raw.githubusercontent.com/manofsteel0007/grafana_setup/main/pr
 
 sudo mkdir /opt/blackbox
 
-
 sudo wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-amd64.tar.gz -O /opt/blackbox/blackbox_exporter-0.19.0.linux-amd64.tar.gz
 
 sudo tar xvzf /opt/blackbox/blackbox_exporter-0.19.0.linux-amd64.tar.gz -C /opt/blackbox/
