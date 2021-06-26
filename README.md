@@ -42,7 +42,30 @@ node_exporter run on 9100 port and expose 9100 port.
     chmod +x server-setup.sh
     ./server-setup.sh
 
-**Download prometheus, grafana ,blackbox-exporter :**
+wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.7-arm64.deb
+sudo dpkg -i influxdb2-2.0.7-arm64.deb
+
+for adding a new node, open prometheus.yml 
+
+inside job_name: node 
+
+    - targets:
+      - http://example:9100
+      #add here
+
+pasting your ip address of the client instead of 'example'.
+
+for adding a web target, open prometheus.yml
+
+inside job_name: blackbox and job_name: website-monitoring-icmp 
+
+    - targets:
+      - http://example.com
+      #add here
+
+paste the target url install 'http://example.com'
+
+**OR Download prometheus, grafana ,blackbox-exporter :**
 
     wget https://github.com/prometheus/prometheus/releases/download/v2.27.1/prometheus-2.27.1.linux-amd64.tar.gz
     wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-amd64.tar.gz
