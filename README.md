@@ -42,8 +42,11 @@ node_exporter run on 9100 port and expose 9100 port.
     chmod +x server-setup.sh
     ./server-setup.sh
 
-wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.7-arm64.deb
-sudo dpkg -i influxdb2-2.0.7-arm64.deb
+**Install influxdb2 for ubuntu amd64**
+
+    sudo mkdir /opt/influxdb
+    sudo wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.7-arm64.deb -O /opt/influxdb/influxdb2-2.0.7-arm64.deb
+    sudo dpkg -i /opt/influxdb/influxdb2-2.0.7-arm64.deb
 
 for adding a new node, open prometheus.yml 
 
@@ -145,13 +148,33 @@ paste the target url install 'http://example.com'
 
 **Grafana Setup**
 
+setting up smtp 
+
+    sudo service grafana-server stop
+
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/0.png)
+
+    sudo service grafana-server start
+
 grafana runs on 3000 port.
 
 for custom overall Node_monitoring import the grafana_dashboard.json file
 
+**influxdb setup**
 
+influxdb runs on 8086 port.
+
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/10.png)
+
+after signing in data->token->root's token->token
+
+copy the token and paste inside the app.py
 
 ## Screenshots
+
+http://localhost:8086
+
+![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/1.png)
 
 http://localhost:3000
 
