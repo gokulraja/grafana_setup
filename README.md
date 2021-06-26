@@ -123,20 +123,26 @@ user-name: admin and password: admin
 
 ** Download node-exporter:**
     
-    wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+    sudo mkdir /opt/node_exporter
+    sudo wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz -O /opt/node_exporter/node_exporter-1.1.2.linux-amd64.tar.gz
 
 Node exporter will be downloaded
 
 **Expand node-exporter:**
 
-    tar xvzf node_exporter-1.1.2.linux-amd64.tar.gz
+    sudo tar xvzf /opt/node_exporter/node_exporter-1.1.2.linux-amd64.tar.gz -C /opt/node_exporter/
 
-**Run node_exporter:**
+**Adding Node Exporter as a service:**
 
-move inside the folder and run node_exporter
+    sudo wget https://raw.githubusercontent.com/manofsteel0007/grafana_setup/main/node_exporter.service -O /etc/systemd/system/node_exporter.service
 
-    cd node_exporter-1.1.2.linux-amd64
-    ./node_exporter
+**Exposing port locally and run node_exporter:**
+
+    subnet=$(ip -o -f inet addr show | awk '/scope global/ {print $4}')
+    sudo ufw allow from $subnet to any port 9100
+    sudo systemctl daemon-reload
+    sudo systemctl start node_exporter
+    sudo systemctl status node_exporter
 
 node_exporter run on 9100 port and expose 9100 port.
 
