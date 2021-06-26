@@ -11,7 +11,7 @@ from sendgrid.helpers.mail import Mail, Email, To, Content
 
 
 # You can generate a Token from the "Tokens Tab" in the UI
-token = "8TWdi_zdwPcIK-Dzs0ExYth55STiiTSjUmlvGZPWLZq5-_6dsJppWNf5DMJYhjWOgCmozhnWTwmSVg9Pfmb5ZA=="
+token = "paste your influxdb token"
 org = "toor"
 bucket = "checking"
 
@@ -47,7 +47,7 @@ def check_domian(url,val):
         # print (e)
         if flag[url]==0:
             flag[url]=1
-            sg = sendgrid.SendGridAPIClient(api_key='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')
+            sg = sendgrid.SendGridAPIClient(api_key='API KEY')
             from_email = Email("18euit009@skcet.ac.in")  # Change to your verified sender
             to_email = To("18eumc071@skcet.ac.in")  # Change to your recipient
             subject = url+" website is down!!!"
