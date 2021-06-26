@@ -15,7 +15,7 @@ token = "8TWdi_zdwPcIK-Dzs0ExYth55STiiTSjUmlvGZPWLZq5-_6dsJppWNf5DMJYhjWOgCmozhn
 org = "toor"
 bucket = "checking"
 
-client = InfluxDBClient(url="http://152.70.71.114:8086", token=token)
+client = InfluxDBClient(url="http://127.0.0.1:8086", token=token)
 write_api = client.write_api(write_options=SYNCHRONOUS)
 
 # a_yaml_file = open("./prometheus.yml")
