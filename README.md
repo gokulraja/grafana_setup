@@ -23,13 +23,13 @@
 **Install influxdb2 for ubuntu x86**
 
     sudo mkdir /opt/influxdb
-    sudo wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.7-arm64.deb -O /opt/influxdb/influxdb2-2.0.7-arm64.deb
-    sudo dpkg -i /opt/influxdb/influxdb2-2.0.7-arm64.deb      
+    sudo wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.7-amd64.deb -O /opt/influxdb/influxdb2-2.0.7-amd64.deb
+    sudo dpkg -i influxdb2-2.0.7-amd64.deb  
 
 **Install influxdb2 for ubuntu ARM64**
 
     sudo mkdir /opt/influxdb
-    sudo wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.7-arm64.deb
+    sudo wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.7-arm64.deb -O /opt/influxdb/influxdb2-2.0.7-arm64.deb
     sudo dpkg -i /opt/influxdb/influxdb2-2.0.7-arm64.deb
 
 
