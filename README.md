@@ -31,6 +31,7 @@
     sudo mkdir /opt/influxdb
     sudo wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.7-arm64.deb -O /opt/influxdb/influxdb2-2.0.7-arm64.deb
     sudo dpkg -i /opt/influxdb/influxdb2-2.0.7-arm64.deb
+    sudo service influxdb start 
 
 
 for adding a new node, open prometheus.yml 
@@ -61,7 +62,11 @@ influxdb runs on 8086 port.
 
 after signing in data->token->root's token->token
 
+    sudo wget https://raw.githubusercontent.com/manofsteel0007/grafana_setup/main/app.py -O /opt/influxdb/app.py
+
 copy the token and paste inside the app.py 
+
+    python /opt/influxdb/app.py
 
 for adding new website edit the url.json file with check_word
 
@@ -111,7 +116,7 @@ user-name: admin and password: admin
 
 ![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/9.png)
 
- for web-monitoring the code is 13041 and for node-monitoring code is 13978
+ for web-monitoring the code is 13041 and for node-monitoring code is 13978 and copy paste grafan-dashboard.json and import the dashboard
   
 ![App Screenshot](https://github.com/manofsteel0007/grafana_setup/raw/main/images/6.png)
 
